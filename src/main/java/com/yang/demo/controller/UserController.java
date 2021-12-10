@@ -26,4 +26,13 @@ public class UserController {
         return ResultMsg.error("error");
     }
     
+    @RequestMapping("/query1")
+    public ResultMsg queryUser1(@RequestBody @Validated RequestParam requestParam){
+        //ValidatorUtils.validateEntity(requestParam);
+        
+        System.out.println("(requestParam) = " + JSONUtil.toJsonStr(requestParam));
+        
+        return ResultMsg.error("error");
+    }
+    
 }
